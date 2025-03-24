@@ -1,5 +1,5 @@
 
-package PBO3;
+
 import java.util.Scanner;
 public class MatematikaDemo {
     public static void main(String[] args) {

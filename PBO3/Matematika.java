@@ -1,4 +1,3 @@
-package PBO3;
 
 class Matematika {
 
