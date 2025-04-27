@@ -1,4 +1,4 @@
-package PBO5;
+
 class Penjualan{
     private String nama;
     private int jumlah;

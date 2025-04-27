@@ -1,11 +1,12 @@
 import java.util.Scanner;
-public class Laptop {
+
+public class Buah {
 
     private String nama;
     private int harga;
     private int jumlah;
     
-    public Laptop(String nama,int harga,int jumlah){
+    public Buah(String nama,int harga,int jumlah){
         this.nama = nama;
         this.harga = harga;
         this.jumlah = jumlah;
@@ -27,50 +28,45 @@ public class Laptop {
     public double hitumgEstimasi(){
         return harga * jumlah;
     }
-    public void LaptoDdemo(){
+    public void BuahDemo(){
         System.out.println("Nama : " + nama);
         System.out.println("Harga : " + harga);
         System.out.println("Jumlah : " + jumlah);
         System.out.println("Estimasi Pemasukan : " + hitumgEstimasi());
     }
 }
-class LaptopGaming extends Laptop {
-    private String merk;
-    private String layar;
+class BuahBesar extends Buah {
+    private double berat;
 
-    public LaptopGaming(String nama,int harga,int jumlah,String merk,String layer){
+    public BuahBesar(String nama,int harga,int jumlah,double berat){
         super(nama, harga, jumlah);
-        this.merk = merk;
-        this.layar = layar;
+        this.berat = berat;
     }
-    public void setData(String merk,String layer){
-        this.merk = merk;
-        this.layar = layar;
+    public void setData(double berat){
+        this.berat = berat;
     }
-    public String getMerk(){
-        return merk;
-    }
-    public String getLayar(){
-        return layar;
+
+    public double getberat(){
+        return berat;
     }
     @Override
-    public void LaptoDdemo(){
+    public void BuahDemo(){
         System.out.println("Nama : " + getNama());
-        System.out.println("Merk : " + getMerk());
-        System.out.println("Layar : " + getLayar());
         System.out.println("Harga : " + getHarga());
         System.out.println("Jumlah : " + getJumlah());
+        System.out.println("berat per Buah : " + getberat());
         System.out.println("Estimasi Pemasukan : " + hitumgEstimasi());
         System.out.println("===============================================");
     }
 }
-class Dispay {
+class Tampil {
     public static void main(String[] args) {
-        LaptopGaming laptop1 = new LaptopGaming("Victus-16", 20000000, 10, "HP", "IPS FullHD");
-        LaptopGaming laptop2 = new LaptopGaming("LOQ", 16000000, 90, "Lenovo", "IPS FullHD");
-        LaptopGaming laptop3 = new LaptopGaming("ROG ZHEPIRUS", 40000000, 14, "Asus", "Oled FullHD");
-        laptop1.LaptoDdemo();
-        laptop2.LaptoDdemo();
-        laptop3.LaptoDdemo();
+        BuahBesar semangka = new BuahBesar("Semangka", 20000, 10,4.10);
+        BuahBesar melon = new BuahBesar("Melon", 30000, 40,3.91 );
+        BuahBesar durian = new BuahBesar("Durian", 100000, 14,5.5);
+        semangka.BuahDemo();
+        melon.BuahDemo();
+        durian.BuahDemo();
     }
 }
+
